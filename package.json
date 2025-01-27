@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import-data": "node scripts/import-data.mjs"
+    "import-data": "node scripts/importData.js"
   },
   "dependencies": {
     "@radix-ui/react-label": "^2.1.1",

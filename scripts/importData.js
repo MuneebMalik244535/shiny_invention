@@ -11,11 +11,11 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env.local') });
 
 // Create Sanity client
 const client = createClient({
-  projectId:process.env.NEXT_PUBLIC_SANITY_PROJECT_ID = "giz39fl4",
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET="production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID='giz39fl4',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET='production',
   useCdn: false,
-  token: process.env.SANITY_API_TOKEN="sktmeLfvEQxoZOZvFWy3fQNWkZ6dIiBPDjzj7b2KlSjQW0iIdPSFYfDrCL3XrbJgZY8TMnKpwcWGDU3TTg3D7QymMEQKJkGbHvSqZmPHgvbMATp69OILSn3n0Tp2ndx0FiW3DJ5nSCwqFulMr8K8p6w3fmgIjqYElVJ58LFzrsyhQQ4eKDqG",
-  apiVersion: '2021-08-31',
+  token: process.env.SANITY_API_TOKEN='sktmeLfvEQxoZOZvFWy3fQNWkZ6dIiBPDjzj7b2KlSjQW0iIdPSFYfDrCL3XrbJgZY8TMnKpwcWGDU3TTg3D7QymMEQKJkGbHvSqZmPHgvbMATp69OILSn3n0Tp2ndx0FiW3DJ5nSCwqFulMr8K8p6w3fmgIjqYElVJ58LFzrsyhQQ4eKDqG',
+  apiVersion: '2023-10-10',
 });
 
 async function uploadImageToSanity(imageUrl) {
