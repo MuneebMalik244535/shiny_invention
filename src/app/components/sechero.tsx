@@ -18,7 +18,7 @@ const Sechero = () => {
             <img
               src="/on1.jpeg"
               alt="Fast Food Dish"
-              className="w-full rounded-lg shadow-lg object-cover"
+              className="w-full h-40 sm:h-48 md:h-56 lg:h-64 rounded-lg shadow-lg object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="bg-yellow-400 text-black text-sm font-bold px-3 py-1 rounded mb-2">
@@ -31,11 +31,11 @@ const Sechero = () => {
           </div>
 
           {/* Food Card 2 */}
-          <div className="h-40">
+          <div>
             <img
               src="/n2.jpeg"
               alt="Burger"
-              className="w-full rounded-lg shadow-lg object-cover"
+              className="w-full h-40 sm:h-48 md:h-56 lg:h-64 rounded-lg shadow-lg object-cover"
             />
           </div>
 
@@ -44,7 +44,7 @@ const Sechero = () => {
             <img
               src="/on3.jpeg"
               alt="Salad"
-              className="w-full rounded-lg shadow-lg object-cover"
+              className="w-full h-40 sm:h-48 md:h-56 lg:h-64 rounded-lg shadow-lg object-cover"
             />
           </div>
 
@@ -53,7 +53,7 @@ const Sechero = () => {
             <img
               src="/n3.jpeg"
               alt="Donuts"
-              className="w-full rounded-lg shadow-lg object-cover"
+              className="w-full h-40 sm:h-48 md:h-56 lg:h-64 rounded-lg shadow-lg object-cover"
             />
           </div>
         </div>

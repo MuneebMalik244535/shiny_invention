@@ -11,15 +11,15 @@ const menuItems = [
   { name: "Fresh Bread", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/14.jpeg" },
   { name: "Glow Cheese", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/15.jpeg" },
   { name: "Italian Pizza", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "14.5$", image: "/16.jpeg" },
-  { name: "Slice Beef", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/17.jpeg" },
-  { name: "Mushroom Pizza", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/18.jpeg" },
+  { name: "Slice Beef", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/Beef.jpeg" },
+  { name: "Mushroom Pizza", description: "Lacus nisi, et ac dapibus velit in consequat.", price: "12.5$", image: "/Burger.png" },
 ];
 
 const FifthHero: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState("Breakfast");
 
   return (
-    <section className="bg-black text-white py-16 -mt-48 px-4 md:px-8">
+    <section className="bg-black text-white py-16 px-4 md:px-8 mt-10 md:mt-16">
       <div className="container mx-auto">
         <h2 className="text-center text-orange-500 text-2xl mb-2">Choose & pick</h2>
         <h1 className="text-center text-4xl md:text-5xl font-bold mb-8">
@@ -30,7 +30,7 @@ const FifthHero: React.FC = () => {
           {menuCategories.map((category) => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-full ${
+              className={`px-4 py-2 rounded-full text-sm md:text-base ${
                 activeCategory === category ? "bg-orange-500 text-white" : "text-orange-500 hover:bg-orange-500 hover:text-white"
               } transition-colors duration-300`}
               onClick={() => setActiveCategory(category)}
@@ -41,18 +41,21 @@ const FifthHero: React.FC = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/2">
+          {/* Featured Image */}
+          <div className="md:w-1/2 mb-6 md:mb-0">
             <Image
-              src="/00.png" // Dynamic image path for the featured dish
+              src="/01.png" // Dynamic image path for the featured dish
               alt="Featured Dish"
               width={500}
               height={500}
-              className="rounded-lg object-cover w-full h-full"
+              className="rounded-lg object-cover w-full h-auto"
             />
           </div>
-          <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          {/* Menu Items */}
+          <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6">
             {menuItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <div key={index} className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg shadow-md">
                 <Image
                   src={item.image} // Construct the src dynamically
                   alt={item.name}
@@ -61,7 +64,7 @@ const FifthHero: React.FC = () => {
                   className="rounded-lg object-cover"
                 />
                 <div>
-                  <h3 className="font-semibold text-lg">{item.name}</h3>
+                  <h3 className="font-semibold text-lg text-white">{item.name}</h3>
                   <p className="text-gray-400 text-sm">{item.description}</p>
                   <p className="text-orange-500 font-bold mt-1">{item.price}</p>
                 </div>
